@@ -5,17 +5,18 @@
             <label for="username">Username</label>
             <div class="reg-sec">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="text" [(ngModel)]="loginObj.username" name="username" id="username" placeholder="Username">
             </div>
         </div>
         <div class="reg-password">
             <label for="password">Password</label>
             <div class="reg-sec">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" [(ngModel)]="loginObj.password" name="password" id="password"
+                    placeholder="Password">
             </div>
         </div>
-        <button type="button" (click)="registerSuccess()" class="reg-login" >Press to Register</button>
+        <button type="button" (click)="onRegister()" class="reg-login">Press to Register</button>
 
         <div class="reg-footer">
             <span>Sign in</span>

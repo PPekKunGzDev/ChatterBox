@@ -1,0 +1,121 @@
+$p: hsl(213deg 85% 97%);
+$s: hsl(233deg 36% 38%);
+
+@mixin screen {
+    background: $p;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+}
+
+@mixin gradiant-text {
+    background: #CB60B3;
+    background: linear-gradient(to right, #CB60B3 0%, #C146A1 50%, #A80077 51%, #DB36A4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration-line: underline;
+    text-decoration-style: "solid";
+    text-decoration-color: rgba(153, 0, 230, 0.24);
+    text-decoration-thickness: 3px;
+}
+
+.reg-body {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background: hsl(218deg 50% 91%);
+
+    .reg-border {
+        @include screen();
+        gap: 2em;
+
+        h1 {
+            @include gradiant-text();
+            text-align: center;
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-size: 42px;
+            font-style: normal;
+            margin-top: 0;
+            margin: 0;
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        i {
+            color: hsl(0deg 0% 30%);
+        }
+        .reg-sec {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .reg-username {
+            background: hsl(0deg 0% 100%);
+            box-shadow: 0 0 2em hsl(231deg 62% 94%);
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            border-radius: 20px;
+            color: hsl(0deg 0% 30%);
+            input {
+                outline: none;
+                border: none;
+
+                &::placeholder {
+                    color: hsl(0deg 0% 0%);
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .reg-password {
+            background: hsl(0deg 0% 100%);
+            box-shadow: 0 0 2em hsl(231deg 62% 94%);
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            border-radius: 20px;
+            color: hsl(0deg 0% 30%);
+
+            input {
+                outline: none;
+                border: none;
+
+                &::placeholder {
+                    color: hsl(0deg 0% 0%);
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .reg-login {
+            padding: 1em;
+            background: hsl(233deg 36% 38%);
+            color: hsl(0 0 100);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .reg-footer {
+            display: flex;
+            font-size: 0.7em;
+            color: hsl(0deg 0% 37%);
+            gap: 14em;
+
+            span {
+                cursor: pointer
+            }
+        }
+    }
+}
